@@ -1,0 +1,4 @@
+# Detect suspicious DNS tunneling via long subdomains
+event.dataset : "dns"
+and strlen(dns.question.name) > 50
+and network.protocol : "dns"
